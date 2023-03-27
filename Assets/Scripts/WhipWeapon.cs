@@ -10,7 +10,7 @@ public class WhipWeapon : MonoBehaviour
 
     Movement movementVector;
     
-    private float timeToAttack = 4f;
+    private float timeToAttack = 1.5f;
     private float timer;
     Vector2 whipAttackSize = new Vector2(4f, 2f);
     private int whipDamage = 2;
