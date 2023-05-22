@@ -7,7 +7,7 @@ public class projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
     float destroyDelay = 2f;
-    public int bulletDamage = 1;
+    public int damage = 1;
 
     private Rigidbody2D rb;
 
@@ -33,18 +33,18 @@ public class projectile : MonoBehaviour
 
         
     }
-    
-    private void ApplyDamage(Collider2D colliders)
+
+
+    private void update()
     {
-        enemy e = colliders.GetComponent<enemy>();
-            if (e != null)
-            {
-                colliders.GetComponent<enemy>().TakeDamage(bulletDamage);
-            }
+
     }
+}
+    
+   
 
     
-}
+
     
     
 

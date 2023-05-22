@@ -3,16 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class enemy : MonoBehaviour, IDamageable
 { 
     Transform Target;
     private GameObject targetGameObject;
-    [SerializeField] private float speed;
     private Character targetCharacter;
-    [SerializeField] private float hp = 4;
     public int  damage = 1;
     private Rigidbody2D rb;
 
+    [SerializeField] private float speed;
+    [SerializeField] private float hp = 4;
+    [SerializeField] private int experience_reward = 400;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -56,6 +57,7 @@ public class enemy : MonoBehaviour
 
         if (hp < 1)
         {
+            targetGameObject.GetComponent<Level>().AddExperience(experience_reward);
             Destroy(gameObject);
         }
     }

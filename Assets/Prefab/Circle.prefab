@@ -99,8 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185b113aa6849d7489f315b199629fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  damage: 1
+  speed: 2
   hp: 4
+  experience_reward: 400
 --- !u!61 &-5583385318848972327
 BoxCollider2D:
   m_ObjectHideFlags: 0
